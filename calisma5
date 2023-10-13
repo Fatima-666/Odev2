@@ -1,0 +1,55 @@
+// Calisma 5:
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Odevtekrar2 {
+    
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+ 
+        
+        System.out.println("Kiyaslamak istediginiz sayilari giriniz: ");
+
+        /*
+          Sisteme 3 tane sayi girilmesini istedigim icin Scanner methodunu kullandim. Int veri tipi yardimiyla
+          hepsi ayri ayri sayi1 = scan.nextInt(); diye tanimlanabilir ama daha toparlanmis halde yazmak istedigim icin 
+          array ve for methodlari yardimiyla 3 adet girdi alicagimi sisteme belirttim.
+         */
+
+         int [] sayi = new int[3];
+
+        for (int  i = 0; i <sayi.length; i++) {
+            
+           sayi[i] = scan.nextInt();
+       
+        }
+
+        /*
+          Arrays.sort() methodu ile sayilar verdigim kosullar karsiliginda siralandi.
+         */
+        Arrays.sort(sayi);
+          
+          if (sayi[0] < sayi[1] && sayi[1]< sayi[2]) {
+            System.out.println(sayi[0]+ " < " + sayi[1] + " < " + sayi[2]);
+        } else if (sayi[0] == sayi[1] && sayi[1] < sayi[2]) {
+
+            System.out.println(sayi[0] + " = " + sayi[1]+ " < " + sayi[2]);
+        }   else if (sayi[0] == sayi[1] && sayi[1] == sayi[2]) {
+
+            System.out.println(sayi[0] + " = " + sayi[1] + " = " + sayi[2]);
+        }
+        else if (sayi[0] <sayi[1] && sayi[1] == sayi[2]) {
+
+            System.out.println(sayi[0] + " < " + sayi[1] + " = " + sayi[2]);
+        }  else if (sayi[0] >sayi[1] && sayi[1] == sayi[2]) {
+
+             System.out.println(sayi[1] + " = " + sayi[2] + " < " + sayi[0]);
+        }
+        
+          scan.close();
+    }
+             
+      
+        }
