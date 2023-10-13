@@ -1,0 +1,50 @@
+// Calisma 8:
+import java.util.Scanner;
+
+public class Odevtekrar3 {
+    
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+
+        // Sisteme bir sayi girilmesi icin Scanner methodunu kullaniyorum.
+        System.out.println("Sisteme bir sayi giriniz: ");
+        int n = scan.nextInt();
+        
+
+            
+        for (int i = 0; i < n; i++) {
+           /*  Bir dongude ilk once istenilen desen olusuncaya kadar islemi tekrar etmesi icin bosluk birakan dongu
+               olusturup daha sonra  deseni cizmesi ve isleme desen tamamlanana kadar devam etmesi icin iki farkli 
+               donguye girmesini sagliyorum.
+           */
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+
+            }
+             for (int k = 1; k <= 2 * i - 1; k++) {
+            System.out.print("*");
+        }
+
+        System.out.println("\n");
+
+        
+        }
+        /*
+          Desen baklava seklinde oldugu icin yukarida yaptigim islemin aynisini simdi de bosluklarin ve 
+          istenilen desenin sayisini azaltarak kodun istedigim sekilde cikti vermesini sagliyorum.
+         */
+        for (int i = n; i >=1 ; i--) {
+           
+            for (int j = n-i; j >=1; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 2*i-1; k >=1; k--) {
+            System.out.print("*");
+        }
+        System.out.println("\n");
+
+        }
+       
+    }
+}
