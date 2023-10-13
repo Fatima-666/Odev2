@@ -1,0 +1,31 @@
+// Calisma 9 :
+import java.util.Scanner;
+
+public class Odevtekrar4 {
+    
+    public static void main(String[] args) {
+        
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Bir deger giriniz :");
+        long saniye = scan.nextLong();
+
+        // Baska bir metotda yazilan fonksiyon main metodunda yazilabilmesi icin cagiriliyor.
+        displayDuration(saniye);
+
+    }
+
+    //Calisma da long turden sayi istendigi icin daha sonrasinda long veri donusumu yapiliyor.
+    public static void displayDuration(long saniye){
+
+        int saat = (int) (saniye/3600);
+        int dakika = (int) ((saniye%3600)/60);
+        int saniye1 = (int) (saniye%60);
+
+        if (saat==0 || dakika==0 || saniye1==0) {
+            System.out.println("Baska bir deger giriniz");
+        } else{
+             System.out.println("Saat :" +saat+"\nDakika :"+dakika+" \nSaniye :"+saniye1);
+        }
+    }
+}
