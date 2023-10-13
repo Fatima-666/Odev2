@@ -47,9 +47,24 @@ public class Odevtekrar2 {
 
              System.out.println(sayi[1] + " = " + sayi[2] + " < " + sayi[0]);
         }
-        
+//-----------Calisma 6:---------------------------------
+   int middle = midSayi(sayi[0], sayi[1], sayi[2]);
+        System.out.println("Ortadaki sayi :" +middle);
+//------------------------------------------------------
           scan.close();
     }
-             
+//------------------Calisma 6 devami:--------------------
+ public static int midSayi(int a, int b, int c){
+
+        if ((a <= b && b <= c) || (c <= b && b <= a)) {
+            return b;
+        } else if ((b <= a && a <= c) || (c <= a && a <= b)) {
+            return a;
+        } else {
+            return c;
+        }
+
+    }
+ //------------------------------------------------------            
       
         }
