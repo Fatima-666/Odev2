@@ -1,0 +1,53 @@
+// Calisma 4:
+import javax.swing.JOptionPane;
+
+public class Odevtekrar {
+    
+    public static void main(String[] args) {
+
+        // Her hangi bir islem yapabilmem icin sisteme 2 farkli deger girilmesini istiyorum
+        String deger1 = JOptionPane.showInputDialog("Ilk degeri giriniz: ");
+        double doubleDeger1 = Double.parseDouble(deger1);
+        
+        /*  JOptionPane.showInputDialog() methodu degeri String olarak aldigi icin ve girilecek degerin int veya
+            double olmasi gerektiginden String- double donusumu yapiliyor. double veri tipi secme sebebim bolme 
+            isleminde daha net sonuc elde edebilmek.
+        */
+        String deger2 = JOptionPane.showInputDialog("Ikinci degeri giriniz: ");
+        
+        double doubleDeger2 = Double.parseDouble(deger2);
+        String islem = JOptionPane.showInputDialog("Yapmak istediginiz islemi giriniz :");
+        // Bolme isleminde payda '0' olamayacagi icin bir kosul olusturup '0' deger girilmesini engelledim.
+        // Her islem oncesi istenilen isleme gore kodun yapmasi gerekeni tanimladim.
+        if (islem.equals("Bolme")) {
+            if (doubleDeger2 !=0) {
+                 double  bolme = doubleDeger1/doubleDeger2;
+         JOptionPane.showMessageDialog(null,"Girilen degerler: " +doubleDeger1+" ve "+doubleDeger2 +" Sonuc : "+ bolme, "sonuc", 0);
+
+            } else{
+                JOptionPane.showMessageDialog(null, "Bolme isleminde payda '0' olamaz!! " ,"Hata" , JOptionPane.ERROR_MESSAGE);
+            }
+             } else  if(islem.equals("Carpma")){
+            double carpma = doubleDeger1*doubleDeger2;
+            JOptionPane.showMessageDialog(null, "Grilien degerler :" +doubleDeger1+" ve "+doubleDeger2 +" Sonuc: "+carpma, "sonuc",0);
+        } else if (islem.equals("Toplama")) {
+            double toplama = doubleDeger1 + doubleDeger2;
+            JOptionPane.showMessageDialog(null, "Girilen degerler :"+doubleDeger1+" ve "+doubleDeger2+" Sonuc :"+toplama, "sonuc", 0);
+            
+        } else if (islem.equals("Cikarma")) {
+            
+            double cikarma = doubleDeger1 - doubleDeger2;
+            JOptionPane.showMessageDialog(null, "Girilen degerler :"+doubleDeger1+" ve "+doubleDeger2+" Sonuc : "+cikarma, "sonuc", 0);
+        }
+           /*
+             Istenen islem tanimladiklarimdan baska bir sey ise error mesaji vermesini sagladim. Eger zorunlu olarak
+             sisteme bir islem yapilmasi istenseydi while dongusunu kullanip gecerli bir girdi alincaya kadar ayni mesaj
+             yazdirilabilirdi.
+            */
+             else  if (!islem.equals("Bolme") || !islem.equals("Carpma") || !islem.equals("Toplama") || !islem.equals("Cikarma")) {
+                
+                 JOptionPane.showMessageDialog(null, "Gecerli bir islem secmediniz!!!" ,"Hata" , JOptionPane.ERROR_MESSAGE);
+           
+               } 
+    }
+}
