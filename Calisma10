@@ -1,0 +1,34 @@
+// Calisma 10 :
+import java.util.Scanner;
+
+public class Odevtekrar6 {
+    
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Sayi giriniz: ");
+        int sayi = scan.nextInt();
+        // Asal carpanlarina ayrilmasi istenilen sayi sisteme girildi
+        /*  Bir if dongusuyle sayi carpanlarina ayrila biliyorsa ayrilmasini, sayi zaten bir asal sayiysa asal sayi
+            olduguna dair bir cikti vermesini sagladim.
+        */
+        if(sayi%2==0 || sayi%3==0){
+
+        for (int i = 2; i <=sayi; i++) {
+            while (sayi%i==0) {
+
+                System.out.print(i+" ");
+                sayi /=i;
+            }
+            
+        } 
+    } else{
+        System.out.println("Girdiginiz sayi zaten bir  asal sayidir!!!");
+    }
+
+        scan.close();
+
+    }
+   
+}
