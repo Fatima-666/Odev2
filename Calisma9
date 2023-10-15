@@ -12,6 +12,7 @@ public class Odevtekrar4 {
 
         // Baska bir metotda yazilan fonksiyon main metodunda yazilabilmesi icin cagiriliyor.
         displayDuration(saniye);
+scan.close();
 
     }
 
