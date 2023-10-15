@@ -45,6 +45,6 @@ public class Odevtekrar3 {
         System.out.println("\n");
 
         }
-       
+       scan.close();
     }
 }
