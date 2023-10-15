@@ -12,6 +12,7 @@ public class Odevtekrar5 {
         //Yazdigim fonksiyonu burada cagiriyorum
         int sonuc = signum(sayi);
         System.out.println("Sayi :"+sonuc);
+scan.close();
 
     }
 
