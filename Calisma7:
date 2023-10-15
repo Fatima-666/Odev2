@@ -1,0 +1,37 @@
+// Calisma 7 :
+import java.util.Scanner;
+
+public class Odevtekrar5 {
+    
+    public static void main(String[] args) {
+        
+        Scanner scan =  new Scanner(System.in);
+        System.out.println("Sayi giriniz:");
+        //Sisteme bir girdi girilmesini sagliyorum
+        int sayi = scan.nextInt();
+        //Yazdigim fonksiyonu burada cagiriyorum
+        int sonuc = signum(sayi);
+        System.out.println("Sayi :"+sonuc);
+
+    }
+
+    // Girilen sayinin pozitif , negatif veya sifira esit olup olmadigini test eden method yaziyorum
+    public static int signum(int sayi){
+
+        if (sayi<0) {
+            //'0' dan kucuk ise negatif yazdirip -1 cikti vermesini sagliyorum
+            System.out.print("Negatif ");
+            return -1;
+            
+        } else if (sayi>0) {
+            System.out.print("Pozitif ");
+            return 1;
+        } else {
+            System.out.print("Sifir ");
+            return 0;
+        }
+    }
+   
+
+
+}
