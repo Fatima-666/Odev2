@@ -23,7 +23,7 @@ scan.close();
         int dakika = (int) ((saniye%3600)/60);
         int saniye1 = (int) (saniye%60);
 
-        if (saat==0 || dakika==0 || saniye1==0) {
+        if (saat==0 && dakika==0 && saniye1==0) {
             System.out.println("Baska bir deger giriniz");
         } else{
              System.out.println("Saat :" +saat+"\nDakika :"+dakika+" \nSaniye :"+saniye1);
