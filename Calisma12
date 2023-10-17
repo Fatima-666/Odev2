@@ -1,0 +1,46 @@
+// Calisma 12: 
+import java.util.Scanner;
+
+public class Odevtekrar8 {
+
+     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Sayıyı girin: ");
+        int sayi = scan.nextInt();
+
+        goldbachTeoremi(sayi);
+
+        scan.close();
+    }
+
+    /*
+      Girilecek sayinin eksi bir deger  olamamasi  ve asal sayi  olup olmadigi kontrol ediliyor.
+     */
+    public static boolean cift(int sayi1) {
+        if (sayi1 <= 1) {
+            return false;
+        }
+        if (sayi1%2==0 ||sayi1%3==0) {
+            return false;
+        }
+        return true;
+    }
+
+    // Sayi cift olmaz veya eksi bir deger olursa sistemde 'Gecersiz giris ' mesaji gozukecek.
+    public static void goldbachTeoremi(int sayi) {
+        if (sayi % 2 != 0 || sayi <= 2) {
+            System.out.println("Geçersiz giriş!!!");
+            return;
+        }
+
+        for (int i = 2; i <= sayi / 2; i++) {
+            if (cift(i) && cift(sayi - i)) {
+                System.out.println(sayi + " = " + i + " + " + (sayi - i));
+                return;
+            }
+        }
+    }
+
+   
+}
+
